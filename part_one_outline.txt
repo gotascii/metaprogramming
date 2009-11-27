@@ -101,19 +101,27 @@ Metaprogramming Course Outline
       It is an instance of Module.
       Switches self to current module instance, just like class.
       Provides a place to store and share (mixin) methods.
-      
+
       # 10.rb
 
     b. Include
+      Creates an invisible class that proxies method lookups to the module
+      Makes the class the receiver's immediate superclass.
+
+      # 11.rb
+      # ~
+
     c. Extend
+      Adds the invisible class to the receiver's metaclass.
+
+      # ~
+      # 12.rb
+
     d. Callbacks & ClassMethods
+      Modules can define module methods that are called whenever they are included or extended.
+      
+      # 13.rb
 
-  metaprogramming
-    macros
-      module, inheritance
-    blocks
-    define_method
-    method_missing
 
-  dsl
-    instance_eval, class_eval
+What is ruby metaprogramming?
+Using one's understanding of the ruby object model to create methods in the "right place" based on decisions made at runtime. In addition, using the interpreted features of ruby to create actual implementation that is based on runtime decisions.

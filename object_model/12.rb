@@ -5,8 +5,11 @@ module Mana
 end
 
 class Land
-  include Mana
+  extend Mana
 end
 
-swamp = Land.new
+Land.tap
+
+swamp = Object.new
+swamp.extend Mana
 swamp.tap
