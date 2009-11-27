@@ -14,5 +14,5 @@ end
 puts jack.class
 
 # but class << is special syntax to get to the metaclass
-metaclass = class << matz; self; end
-metaclass.instance_methods.grep(/speak/) #=> ["speak"]
+metaclass = class << jack; self; end
+puts metaclass.instance_methods.grep(/sip/)
