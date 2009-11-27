@@ -73,6 +73,7 @@ Metaprogramming Course Outline
 
     e. Classes
       Classes are instances of class Class.
+      Provide a place to store method implementation for instances.
 
       # 06.rb
 
@@ -93,10 +94,19 @@ Metaprogramming Course Outline
 
       # 09.rb
 
-  II. Class vs. Module
-    include vs. extend
-      included, extended
-      ClassMethods
+  II. Modules
+    a. Modules
+      Can have no instances.
+      Can have no subclasses.
+      It is an instance of Module.
+      Switches self to current module instance, just like class.
+      Provides a place to store and share (mixin) methods.
+      
+      # 10.rb
+
+    b. Include
+    c. Extend
+    d. Callbacks & ClassMethods
 
   metaprogramming
     macros
