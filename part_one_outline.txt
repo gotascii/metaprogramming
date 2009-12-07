@@ -1,0 +1,127 @@
+Metaprogramming Course Outline
+  I. Object Model
+    a. Objects
+      state and the things that can be done to/with that state define an object
+
+      # 01.rb
+      # ~ fred -> @name: "Fred"
+      #         @dob: 12/17/1981
+      #         ---
+      #         age()
+      #         marry(other)
+
+      Lots of Person objects can be created each with their own state.
+      Every Person has same set of methods.
+      Adding/changing a method on the Person class has to apply to all person instances.
+      Inefficient to put the methods in the instances.
+      Objects contain a pointer to its class that has a list of methods.
+
+      # ~ fred -> @name: "Fred"
+      #         @dob: 12/17/1981
+      #         ---
+      #         class -> Person
+      #                  ---
+      #                  age()
+      #                  marry(other)
+
+      In order to call a method, Ruby looks up class then method.
+      Draw classes to the right, so first step to find a method is "go right".
+
+    b. Self
+      Self always references current object.
+      What is the "current object"?
+      The default receiver of method calls.
+      Location of instance variables.
+      "Every line of code is executed against a particular self." - Katz
+
+      How does self get set?
+      One way is to call a method with an explicit receiver.
+        1. Switch self to receiver
+        2. Lookup method is self's class
+        3. Invoke the method
+
+      # 02.rb
+      # ~ "Go to the right."
+
+      Super contains a pointer to super class
+      Method resolution follows this until it finds the method
+
+      # 03.rb
+      # ~ "Go to the right then up."
+
+    c. Quick Recap
+      We now know the core mechanics that ruby uses to find and execute code.
+      If we ever want to figure out where a method is defined we just need to answer
+      the question "What is self set to?" and then use "Go to the right." to determine
+      in what class the method is defined in.
+      Every line of ruby follows these rules.
+
+    d. Metaclasses (anonymous, singleton, ...)
+      # 04.rb
+
+      Every object gets its own invisible class, called a metaclass.
+
+      # ~
+
+      This class is invisible!
+      We can get to the class using class << obj
+      def has a feature, when called with an object it adds the method to the metaclass.
+
+      # 05.rb
+
+      Even with the presence of this metaclass, the above rules still apply!
+
+    e. Classes
+      Classes are instances of class Class.
+      Provide a place to store method implementation for instances.
+
+      # 06.rb
+
+      Class names are constants that point to a class instances.
+
+      # 07.rb
+
+      Class definition is another way to change self.
+      Inside class definition self changes to instance of the class.
+      Since classes are just instances, all of the method resolution rules we talked about apply.
+
+      # 08.rb
+
+      # ~ class metalcass
+
+      This means there are no "class methods" in ruby!
+      Class methods are methods on a classes metaclass.
+
+      # 09.rb
+
+  II. Modules
+    a. Modules
+      Can have no instances.
+      Can have no subclasses.
+      It is an instance of Module.
+      Switches self to current module instance, just like class.
+      Provides a place to store and share (mixin) methods.
+
+      # 10.rb
+
+    b. Include
+      Creates an invisible class that proxies method lookups to the module
+      Makes the class the receiver's immediate superclass.
+
+      # 11.rb
+      # ~
+
+    c. Extend
+      Adds the invisible class to the receiver's metaclass.
+
+      # ~
+      # 12.rb
+
+    d. Callbacks & ClassMethods
+      Modules can define module methods that are called whenever they are included or extended.
+      
+      # 13.rb
+
+
+What is ruby metaprogramming?
+Using one's understanding of the ruby object model to create methods in the "right place" based on decisions made at runtime. In addition, using the interpreted features of ruby to create actual implementation that is based on runtime decisions.
