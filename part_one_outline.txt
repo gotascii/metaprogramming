@@ -1,7 +1,7 @@
 Metaprogramming Course Outline
   I. Object Model
     a. Objects
-      state and the things that can be done to/with that state define an object
+      State and the things that can be done to that state define an object.
 
       # 01.rb
       # ~ fred -> @name: "Fred"
@@ -107,21 +107,27 @@ Metaprogramming Course Outline
     b. Include
       Creates an invisible class that proxies method lookups to the module
       Makes the class the receiver's immediate superclass.
+      Include is a private method.
 
       # 11.rb
       # ~
 
     c. Extend
       Adds the invisible class to the receiver's metaclass.
+      Extend is a public method.
 
       # ~
       # 12.rb
 
     d. Callbacks & ClassMethods
-      Modules can define module methods that are called whenever they are included or extended.
-      
+      Modules can define module methods that are called whenever they are included or used to extended.
+
       # 13.rb
 
+      In order to extend a class when you include a module use the ClassMethods technique.
+      
+      # 14.rb
 
-What is ruby metaprogramming?
-Using one's understanding of the ruby object model to create methods in the "right place" based on decisions made at runtime. In addition, using the interpreted features of ruby to create actual implementation that is based on runtime decisions.
+What is Ruby metaprogramming?
+Using one's understanding of the Ruby object model to create methods in the "right place" based on decisions made at runtime.
+Using Ruby's interpreted environment to create code based on runtime decisions.
