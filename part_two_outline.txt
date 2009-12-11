@@ -1,0 +1,69 @@
+Metaprogramming Course Outline (Part II)
+  I. Macros
+    a. Quick Example - 01.rb
+      attr methods are defined on the Module class, can be used whenever
+      self is a class or module
+
+      they 'look' like keywords, but are actually class methods used in class definition
+    b. Create a macro through a class method - 02.rb
+      since self.name is being defined on the class it can then be used
+      as a macro within that class
+    c. Create a macro through a module - 03.rb & 04.rb
+      Person class is being extended with Speech module, all instance
+      level methods on Speech are now class methods on Person
+      
+      Speech module now has a hook method 'included' on it, this method
+      will take the class including Speech and call extend ClassMethods on 
+      that class, thereby extending Person to have the class method say
+    d. Macros defined in a parent class, are inherited on child classes - 05.rb
+ 
+    II. Blocks
+      a. Calling a block, two ways - 01.rb
+        blocks are chunks of code between { } or do end
+        blocks are like the body of code in an anonymous method
+        blocks can take args just like methods, passed differently using | |
+      b. Creating a block
+      c. Creating a block that takes arguments
+      d. Argument & Variable scope - 04.rb
+        #MO STUFF HERE#
+      e. Iterators - 05.rb
+        iterators are methods that can invoke a block of code
+        blocks passed to methods have scope remembered before the method is entered
+      f. Blocks, Procs, Lambdas, Methods
+        Blocks - (they aren’t really “objects” but they are still “callable.”) 
+          evaluated in the scope in which they’re defined.
+        Procs - objects of class Proc. Like blocks, they are evaluated in the 
+          scope where they’re defined.
+        Lambdas — also objects of class Proc but subtly different from regular
+          procs, they require the passing of the arguments they were defined
+          with. They’re closures like blocks and procs, and as such they’re
+          evaluated in the scope where they’re defined.
+        Methods - bound to an object, they are evaluated in that object’s 
+          scope. They can also be unbound from their scope and rebound to the
+          scope of another object.
+
+    III. define_method
+      a. Quick Example - 01.rb
+        Module#define_method
+      b. Example with arguments - 02.rb
+        Note, what we've done here is dynamically created macros
+      c. Let's make our own attr_accessor, called aa
+        Define a method called aa on Module, this method takes one argument
+        and dynamically creates a getter and setter method based on the name
+        of that argument.
+    IV: method_missing
+      a. NoMethodError example - 01.rb
+        method lookup: ruby goes into p's class and browses it's instance
+        methods. since it can't find it there, ruby goes up the ancestral
+        chain into Object and finally Kernal. if it still cannot find the
+        method, ruby will raise an undefined method exception.
+      b. Overwriting method_missing example - 02.rb
+        there is an instance method on Kernel named method_missing, this is
+        the last thing Ruby checks before raising an exception. if we
+        overwrite this method in the Person class, we can intercept Ruby while
+        it's doing it's method lookup.
+      c. ActiveRecord's dynamic find methods - 03.rb
+        ActiveRecord uses method_missing to intercept find_by_* and
+        find_all_by_* calls. In order to reduce the cost of these expensive
+        method missing calls, AR will dynamically define the find_by method
+        after the first time it's called.

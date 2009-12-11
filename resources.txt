@@ -1,3 +1,4 @@
 http://ruby-metaprogramming.heroku.com/
 http://pragprog.com/screencasts/v-dtrubyom/the-ruby-object-model-and-metaprogramming
+http://pragprog.com/titles/ppmetr/metaprogramming-ruby
 http://yehudakatz.com/2009/11/15/metaprogramming-in-ruby-its-all-about-the-self/

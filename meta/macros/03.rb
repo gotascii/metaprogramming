@@ -1,18 +1,10 @@
 module Speech
-  def self.included(base)
-    base.extend ClassMethods
+  def say(msg)
+    puts msg
   end
-  
-  module ClassMethods
-    def say(msg)
-      puts msg
-    end
-  end 
 end
 
 class Person
-  include Speech
+  extend Speech
   say "hello"
 end
-
-Person.new
