@@ -24,12 +24,10 @@ Metaprogramming Course Outline (Part II)
         blocks can take args just like methods, passed differently using | |
       b. Creating a block
       c. Creating a block that takes arguments
-      d. Argument & Variable scope - 04.rb
-        #MO STUFF HERE#
-      e. Iterators - 05.rb
+      d. Iterators - 05.rb
         iterators are methods that can invoke a block of code
         blocks passed to methods have scope remembered before the method is entered
-      f. Blocks, Procs, Lambdas, Methods
+      e. Blocks, Procs, Lambdas, Methods
         Blocks - (they aren’t really “objects” but they are still “callable.”) 
           evaluated in the scope in which they’re defined.
         Procs - objects of class Proc. Like blocks, they are evaluated in the 
