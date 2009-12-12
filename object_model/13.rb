@@ -13,10 +13,10 @@ module Mana
 end
 
 class Land
-  include Mana
+  include Mana # Mana.included(self) == Mana.included(Land)
 end
 
 class Creature
 end
 
-Creature.extend(Mana)
+Creature.extend(Mana) # Mana.extended(self) == Mana.extended(Creature)

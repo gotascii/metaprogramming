@@ -1,15 +1,32 @@
 class Person
-  attr_accessor :name, :dob
-
-  def age
-    puts "too old!"
+  def name=(val)
+    @name = val
   end
 
-  def marry(other)
-    puts "I'm marrying #{other}!"
+  def name
+    @name
   end
 end
 
 fred = Person.new
+fred.name = 'Fred'
 
 puts fred.inspect
+
+jack = Person.new
+jack.name = 'Jack'
+
+puts jack.inspect
+
+# class Person
+#   def name=(val)
+#     @name = val
+#   end
+# 
+#   def name
+#     @name + "OMG"
+#   end
+# end
+# 
+# puts fred.name
+# puts jack.name

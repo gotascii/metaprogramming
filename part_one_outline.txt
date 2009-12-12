@@ -1,3 +1,7 @@
+What is Ruby metaprogramming?
+Using one's understanding of the Ruby object model to create methods in the "right place" based on decisions made at runtime.
+Using Ruby's interpreted environment to create code based on runtime decisions.
+
 Metaprogramming Course Outline
   I. Object Model
     a. Objects
@@ -127,7 +131,3 @@ Metaprogramming Course Outline
       In order to extend a class when you include a module use the ClassMethods technique.
       
       # 14.rb
-
-What is Ruby metaprogramming?
-Using one's understanding of the Ruby object model to create methods in the "right place" based on decisions made at runtime.
-Using Ruby's interpreted environment to create code based on runtime decisions.

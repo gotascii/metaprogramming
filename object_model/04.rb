@@ -10,4 +10,7 @@ def jack.sip
   puts "Mmm, breakfast of champions."
 end
 
-puts jack.sip
+jack.sip
+
+fred = Guy.new
+fred.sip
