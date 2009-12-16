@@ -81,6 +81,39 @@ link://gotascii/metaprogramming/blob/master/object_model/08.rb
 
 link://gotascii/metaprogramming/blob/master/object_model/09.rb
 
+== Modules
+
+link://gotascii/metaprogramming/blob/master/object_model/10.rb
+
+* Can have no instances.
+* Can have no subclasses.
+* It is an instance of Module.
+* Switches self to current module instance, just like class.
+* Provides a place to store and share (mixin) methods.
+
+=== Include
+
+* Creates an invisible class that proxies method lookups to the module
+* Makes the class the receiver's immediate superclass.
+* Include is a private method.
+
+link://gotascii/metaprogramming/blob/master/object_model/11.rb
+
+=== Extend
+* Adds the invisible class to the receiver's metaclass.
+* Extend is a public method.
+
+link://gotascii/metaprogramming/blob/master/object_model/12.rb
+
+=== Callbacks & ClassMethods
+* Modules can define module methods that are called whenever they are included or used to extended.
+
+link://gotascii/metaprogramming/blob/master/object_model/13.rb
+
+* In order to extend a class when you include a module use the ClassMethods technique.
+  
+link://gotascii/metaprogramming/blob/master/object_model/14.rb
+
 == Further Reading
 
 http://ruby-metaprogramming.heroku.com

@@ -1,26 +1,3 @@
-    e. Classes
-      Classes are instances of class Class.
-      Provide a place to store method implementation for instances.
-
-      # 06.rb
-
-      Class names are constants that point to a class instances.
-
-      # 07.rb
-
-      Class definition is another way to change self.
-      Inside class definition self changes to instance of the class.
-      Since classes are just instances, all of the method resolution rules we talked about apply.
-
-      # 08.rb
-
-      # ~ class metalcass
-
-      This means there are no "class methods" in ruby!
-      Class methods are methods on a classes metaclass.
-
-      # 09.rb
-
   II. Modules
     a. Modules
       Can have no instances.
