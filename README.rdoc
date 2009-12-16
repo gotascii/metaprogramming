@@ -2,15 +2,15 @@
 
 A collection of notes, codes and various further readings that accompanied the December 12th Hackday event.
 
-= What is Ruby meta-programming?
+== What is Ruby meta-programming?
 
 Using one's understanding of the Ruby object model to create methods in the "right place" based on decisions made at runtime.
 
 Using Ruby's interpreted environment to create code based on runtime decisions.
 
-= Object Model
+== Object Model
 
-== Objects
+=== Objects
 
 link://gotascii/metaprogramming/blob/master/object_model/01.rb
 
@@ -23,7 +23,7 @@ link://gotascii/metaprogramming/blob/master/object_model/01.rb
 * In order to call a method, Ruby looks up class then method.
 * Draw classes to the right, so first step to find a method is "go right".
 
-== Self
+=== Self
 
 
 == Further Reading
