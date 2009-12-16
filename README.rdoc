@@ -24,7 +24,7 @@ link://gotascii/metaprogramming/blob/master/object_model/01.rb
 * Draw classes to the right, so first step to find a method is "go right".
 
 === Self
-
+===
 * Self always references current object.
 * What is the "current object"?
 * The default receiver of method calls.
