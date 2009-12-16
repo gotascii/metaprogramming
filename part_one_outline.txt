@@ -1,25 +1,3 @@
-    c. Quick Recap
-      We now know the core mechanics that ruby uses to find and execute code.
-      If we ever want to figure out where a method is defined we just need to answer
-      the question "What is self set to?" and then use "Go to the right." to determine
-      in what class the method is defined in.
-      Every line of ruby follows these rules.
-
-    d. Metaclasses (anonymous, singleton, ...)
-      # 04.rb
-
-      Every object gets its own invisible class, called a metaclass.
-
-      # ~
-
-      This class is invisible!
-      We can get to the class using class << obj
-      def has a feature, when called with an object it adds the method to the metaclass.
-
-      # 05.rb
-
-      Even with the presence of this metaclass, the above rules still apply!
-
     e. Classes
       Classes are instances of class Class.
       Provide a place to store method implementation for instances.
