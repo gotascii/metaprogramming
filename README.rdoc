@@ -48,6 +48,12 @@ One way is to call a method with an explicit receiver.
 
 "Go to the right then up." link://gotascii/metaprogramming/blob/master/object_model/03.rb
 
+=== Recap
+
+* We now know the core mechanics that ruby uses to find and execute code.
+* If we ever want to figure out where a method is defined we just need to answer the question "What is self set to?" and then use "Go to the right." to determine in what class the method is defined in.
+* Every line of ruby follows these rules.
+
 == Further Reading
 
 http://ruby-metaprogramming.heroku.com
