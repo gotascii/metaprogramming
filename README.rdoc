@@ -1,10 +1,10 @@
 = Intro to Ruby Meta-Programming
 
-A collection of notes, example codes and various further readings that accompanied the December 12th Hackday event.
+A collection of notes, codes and various further readings that accompanied the December 12th Hackday event.
 
 == Further Reading
 
-http://ruby-metaprogramming.heroku.com/
+http://ruby-metaprogramming.heroku.com
 An online meta-programming course.
 
 http://pragprog.com/screencasts/v-dtrubyom/the-ruby-object-model-and-metaprogramming
@@ -13,5 +13,5 @@ Commercial screencasts on meta-programming by Dave Thomas.
 http://pragprog.com/titles/ppmetr/metaprogramming-ruby
 A whole book on this stuff.
 
-http://yehudakatz.com/2009/11/15/metaprogramming-in-ruby-its-all-about-the-self/
-The most concise summary of meta-programming in Ruby by Yehuda Katz.
+http://yehudakatz.com/2009/11/15/metaprogramming-in-ruby-its-all-about-the-self
+A concise summary of meta-programming in Ruby by Yehuda Katz.
