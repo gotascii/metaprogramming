@@ -12,7 +12,21 @@ Using Ruby's interpreted environment to create code based on runtime decisions.
 
 === Objects
 
-State and the things that can be done to that state define an object.
+ * State and the things that can be done to that state define an object.
+
+ 01.rb
+
+ * Lots of Person objects can be created each with their own state.
+ * Every Person has same set of methods.
+ * Adding/changing a method on the Person class has to apply to all person instances.
+ * Inefficient to put the methods in the instances.
+ * Objects contain a pointer to its class that has a list of methods.
+
+ * In order to call a method, Ruby looks up class then method.
+ * Draw classes to the right, so first step to find a method is "go right".
+
+=== Self
+
 
 == Further Reading
 
