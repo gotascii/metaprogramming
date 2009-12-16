@@ -48,11 +48,17 @@ One way is to call a method with an explicit receiver.
 
 "Go to the right then up." link://gotascii/metaprogramming/blob/master/object_model/03.rb
 
-=== Recap
+=== Metaclasses (anonymous, singleton, ...)
 
-* We now know the core mechanics that ruby uses to find and execute code.
-* If we ever want to figure out where a method is defined we just need to answer the question "What is self set to?" and then use "Go to the right." to determine in what class the method is defined in.
-* Every line of ruby follows these rules.
+link://gotascii/metaprogramming/blob/master/object_model/04.rb
+
+* Every object gets its own invisible class, called a metaclass.
+* We can get to the class using class << obj
+* def has a feature, when called with an object it adds the method to the metaclass.
+
+link://gotascii/metaprogramming/blob/master/object_model/05.rb
+
+* Even with the presence of this metaclass, the above rules still apply!
 
 == Further Reading
 
