@@ -93,26 +93,28 @@ link://gotascii/metaprogramming/blob/master/object_model/10.rb
 
 === Include
 
+link://gotascii/metaprogramming/blob/master/object_model/11.rb
+
 * Creates an invisible class that proxies method lookups to the module
 * Makes the class the receiver's immediate superclass.
 * Include is a private method.
 
-link://gotascii/metaprogramming/blob/master/object_model/11.rb
-
 === Extend
-* Adds the invisible class to the receiver's metaclass.
-* Extend is a public method.
 
 link://gotascii/metaprogramming/blob/master/object_model/12.rb
 
+* Adds the invisible class to the receiver's metaclass.
+* Extend is a public method.
+
 === Callbacks & ClassMethods
-* Modules can define module methods that are called whenever they are included or used to extended.
 
 link://gotascii/metaprogramming/blob/master/object_model/13.rb
 
-* In order to extend a class when you include a module use the ClassMethods technique.
-  
+* Modules can define module methods that are called whenever they are included or used to extended.
+
 link://gotascii/metaprogramming/blob/master/object_model/14.rb
+
+* In order to extend a class when you include a module use the ClassMethods technique.
 
 == Further Reading
 
