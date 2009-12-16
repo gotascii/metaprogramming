@@ -33,7 +33,7 @@ link://gotascii/metaprogramming/blob/master/object_model/02.rb
 * Location of instance variables.
 * "Every line of code is executed against a particular self." - Katz
 
- How does self get set?
+How does self get set?
 
 One way is to call a method with an explicit receiver.
 
