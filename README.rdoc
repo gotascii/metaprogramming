@@ -12,7 +12,7 @@ Using Ruby's interpreted environment to create code based on runtime decisions.
 
 === Objects
 
-link://gotascii/metaprogramming/object_model/01.rb
+link://gotascii/metaprogramming/blob/master/object_model/01.rb
 
 * State and the things that can be done to that state define an object.
 * Lots of Person objects can be created each with their own state.
