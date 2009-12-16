@@ -2,6 +2,18 @@
 
 A collection of notes, codes and various further readings that accompanied the December 12th Hackday event.
 
+= What is Ruby meta-programming?
+
+Using one's understanding of the Ruby object model to create methods in the "right place" based on decisions made at runtime.
+
+Using Ruby's interpreted environment to create code based on runtime decisions.
+
+== Object Model
+
+=== Objects
+
+State and the things that can be done to that state define an object.
+
 == Further Reading
 
 http://ruby-metaprogramming.heroku.com
