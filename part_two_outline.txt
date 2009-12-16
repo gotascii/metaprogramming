@@ -1,6 +1,5 @@
 Metaprogramming Course Outline (Part II)
-
-  I. Macroz
+  I. Macros
     a. Quick Example - 01.rb
       attr methods are defined on the Module class, can be used whenever
       self is a class or module
