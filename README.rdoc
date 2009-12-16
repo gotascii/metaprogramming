@@ -25,6 +25,26 @@ link://gotascii/metaprogramming/blob/master/object_model/01.rb
 
 === Self
 
+* Self always references current object.
+* What is the "current object"?
+* The default receiver of method calls.
+* Location of instance variables.
+* "Every line of code is executed against a particular self." - Katz
+
+==== How does self get set?
+One way is to call a method with an explicit receiver.
+1. Switch self to receiver
+2. Lookup method is self's class
+3. Invoke the method
+
+"Go to the right."
+link://gotascii/metaprogramming/blob/master/object_model/02.rb
+
+* Super contains a pointer to super class
+* Method resolution follows this until it finds the method
+
+"Go to the right then up."
+link://gotascii/metaprogramming/blob/master/object_model/03.rb
 
 == Further Reading
 
