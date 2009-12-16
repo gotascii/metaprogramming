@@ -14,9 +14,13 @@ end
 puts jack.class
 
 # but class << is special syntax to get to the metaclass
-metaclass = class << jack; self; end
-puts metaclass.instance_methods.grep(/sip/).inspect
+class << jack
+  self
+end
 
+# metaclass = class << jack; self; end
+# puts metaclass.instance_methods.grep(/sip/).inspect
+ 
 fred = Guy.new
 metaclass = class << fred; self; end
 puts metaclass.instance_methods.grep(/sip/).inspect

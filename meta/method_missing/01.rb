@@ -1,3 +1,5 @@
-class Person; end
+class Person
+end
+
 p = Person.new
 p.name

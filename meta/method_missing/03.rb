@@ -14,3 +14,8 @@ module ActiveRecord
     end
   end
 end
+
+Person = Class.new
+Person.class_eval <<-STRING
+  attr_accessor :name
+STRING

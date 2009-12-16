@@ -5,7 +5,8 @@ module Mana
 end
 
 class Land
-  extend Mana
+  self.extend Mana
+  # self -> Land
 end
 
 Land.tap

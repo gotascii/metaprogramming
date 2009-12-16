@@ -1,3 +1,12 @@
+
+class Bob
+end
+
+b = Bob.new
+
+Class.new()
+
+
 module Mana
   def self.included(base)
     base.extend ClassMethods

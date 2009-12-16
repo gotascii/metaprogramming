@@ -1,13 +1,18 @@
+# defined?(Mana) ? Mana : Module.new
+
 module Mana
   def tap
     puts "tapped!"
   end
+
+  def self.module_method
+  end
 end
 
-Mana.new
+# Mana.new
 
-class Land < Mana
-end
+# class Land < Mana
+# end
 
 # it is an instance like any other ruby object
 def Mana.module_method

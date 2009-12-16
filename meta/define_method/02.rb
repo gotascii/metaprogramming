@@ -1,14 +1,11 @@
-class BoozeRatings
-  def self.rate(brand, rating)
-    define_method(brand) do
-      puts "#{brand} gets a #{rating}!"
-    end
+def attr_accessor(name)
+
+  define_method(name) do
+    instance_variable_get "@#{name}"
   end
-
-  rate :jack, 5
-  rate :jim, 4
+  
+  define_method("#{name}=") do |value|
+    instance_variable_set "@#{name}", value 
+  end
+  
 end
-
-b = BoozeRatings.new
-b.jack
-b.jim

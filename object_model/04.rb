@@ -6,7 +6,7 @@ end
 
 jack = Guy.new
 
-def jack.sip
+def jack.name
   puts "Mmm, breakfast of champions."
 end
 

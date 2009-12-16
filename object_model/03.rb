@@ -12,4 +12,4 @@ end
 
 jack = Guy.new
 
-jack.strength
+puts jack.strength
