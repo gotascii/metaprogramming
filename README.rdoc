@@ -132,8 +132,8 @@ link://gotascii/metaprogramming/blob/master/meta/macros/02.rb
 
 === Create a macro through a module
 
-link://gotascii/metaprogramming/blob/master/meta/macros/03.rb
-link://gotascii/metaprogramming/blob/master/meta/macros/04.rb
+1. link://gotascii/metaprogramming/blob/master/meta/macros/03.rb
+2. link://gotascii/metaprogramming/blob/master/meta/macros/04.rb
 
 * Person class is being extended with Speech module, all instance level methods on Speech are now class methods on Person.
 * Speech module now has a hook method 'included' on it, this method will take the class including Speech and call extend ClassMethods on that class, thereby extending Person to have the class method say.
