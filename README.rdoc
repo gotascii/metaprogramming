@@ -140,6 +140,38 @@ link://gotascii/metaprogramming/blob/master/meta/macros/04.rb
 
 * Speech module now has a hook method 'included' on it, this method will take the class including Speech and call extend ClassMethods on that class, thereby extending Person to have the class method say.
 
+=== Macros defined in a parent class, are inherited on child classes
+
+link://gotascii/metaprogramming/blob/master/meta/macros/05.rb
+
+== Blocks
+
+=== Calling a block, two ways
+
+link://gotascii/metaprogramming/blob/master/meta/blocks/01.rb
+
+* Blocks are chunks of code between { } or do end.
+* Blocks are like the body of code in an anonymous method.
+* Blocks can take args just like methods, passed differently using | |.
+
+=== Creating a block
+
+=== Creating a block that takes arguments
+
+=== Iterators
+
+link://gotascii/metaprogramming/blob/master/meta/blocks/05.rb
+
+* Iterators are methods that can invoke a block of code.
+* Blocks passed to methods have scope remembered before the method is entered.
+
+=== Blocks, Procs, Lambdas, Methods
+
+* Blocks - Evaluated in the scope in which they’re defined.
+* Procs - Objects of class Proc. Like blocks, they are evaluated in the scope where they’re defined.
+* Lambdas — Objects of class Proc but subtly different from regular procs, they require the passing of the arguments they were defined with. They’re closures like blocks and procs, and as such they’re evaluated in the scope where they’re defined.
+* Methods - Bound to an object, they are evaluated in that object’s scope. They can also be unbound from their scope and rebound to the scope of another object.
+
 == Further Reading
 
 http://ruby-metaprogramming.heroku.com

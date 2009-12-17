@@ -1,5 +1,3 @@
-    d. Macros defined in a parent class, are inherited on child classes - 05.rb
- 
     II. Blocks
       a. Calling a block, two ways - 01.rb
         blocks are chunks of code between { } or do end
@@ -32,6 +30,7 @@
         Define a method called aa on Module, this method takes one argument
         and dynamically creates a getter and setter method based on the name
         of that argument.
+
     IV: method_missing
       a. NoMethodError example - 01.rb
         method lookup: ruby goes into p's class and browses it's instance
