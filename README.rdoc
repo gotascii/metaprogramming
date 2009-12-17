@@ -196,13 +196,13 @@ link://gotascii/metaprogramming/blob/master/meta/method_missing/01.rb
 
 * Method lookup: Ruby goes into p's class and browses it's instance methods. Since it can't find it there, ruby goes up the ancestral chain into Object and finally Kernal. If it still cannot find the method, Ruby will raise an undefined method exception.
 
-== Overwriting method_missing example - 02.rb
+=== Overwriting method_missing example - 02.rb
 
 link://gotascii/metaprogramming/blob/master/meta/method_missing/02.rb
 
 * There is an instance method on Kernel named method_missing, this is the last thing Ruby checks before raising an exception. If we overwrite this method in the Person class, we can intercept Ruby while it's doing it's method lookup.
 
-== ActiveRecord's dynamic find methods
+=== ActiveRecord's dynamic find methods
 
 link://gotascii/metaprogramming/blob/master/meta/method_missing/03.rb
 
