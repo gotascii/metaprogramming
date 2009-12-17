@@ -116,6 +116,28 @@ link://gotascii/metaprogramming/blob/master/object_model/14.rb
 
 * In order to extend a class when you include a module use the ClassMethods technique.
 
+== Macros
+
+link://gotascii/metaprogramming/blob/master/meta/macros/01.rb
+
+* Attr methods are defined on the Module class, can be used whenever.
+* Self is a class or module.
+* They 'look' like keywords, but are actually class methods used in class definition.
+
+=== Create a macro through a class method
+
+link://gotascii/metaprogramming/blob/master/meta/macros/02.rb
+
+* Since self.name is being defined on the class it can then be used as a macro within that class.
+
+=== Create a macro through a module
+
+link://gotascii/metaprogramming/blob/master/meta/macros/03.rb
+link://gotascii/metaprogramming/blob/master/meta/macros/04.rb
+
+* Person class is being extended with Speech module, all instance level methods on Speech are now class methods on Person.
+* Speech module now has a hook method 'included' on it, this method will take the class including Speech and call extend ClassMethods on that class, thereby extending Person to have the class method say.
+
 == Further Reading
 
 http://ruby-metaprogramming.heroku.com

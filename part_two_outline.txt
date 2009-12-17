@@ -1,20 +1,3 @@
-Metaprogramming Course Outline (Part II)
-  I. Macros
-    a. Quick Example - 01.rb
-      attr methods are defined on the Module class, can be used whenever
-      self is a class or module
-
-      they 'look' like keywords, but are actually class methods used in class definition
-    b. Create a macro through a class method - 02.rb
-      since self.name is being defined on the class it can then be used
-      as a macro within that class
-    c. Create a macro through a module - 03.rb & 04.rb
-      Person class is being extended with Speech module, all instance
-      level methods on Speech are now class methods on Person
-      
-      Speech module now has a hook method 'included' on it, this method
-      will take the class including Speech and call extend ClassMethods on 
-      that class, thereby extending Person to have the class method say
     d. Macros defined in a parent class, are inherited on child classes - 05.rb
  
     II. Blocks
